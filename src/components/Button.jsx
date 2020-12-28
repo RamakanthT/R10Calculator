@@ -9,7 +9,7 @@ const isOperator = (val) => {
 
 export const Button = (props) => {
     return (
-        <div className={styles.button_wrapper ` ${isOperator(props.children) ? styles.empty : styles.operator}`}
+        <div className={ `${isOperator(props.children) ? styles.button_wrapper+" "+styles.empty : styles.button_wrapper+" "+styles.operator}`}
             onClick={() => props.handleClick(props.children)}>
             {props.children}
         </div>
